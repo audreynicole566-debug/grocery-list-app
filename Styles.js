@@ -1,0 +1,52 @@
+import { StyleSheet, Platform, StatusBar } from 'react-native';
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f1f8e9',
+    paddingHorizontal: 16,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight + 12 : 12,
+  },
+  title: { fontSize: 28, fontWeight: 'bold', color: '#2e7d32', textAlign: 'center' },
+  counter: { textAlign: 'center', color: '#555', marginTop: 4, marginBottom: 16 },
+  inputRow: { flexDirection: 'row', marginBottom: 16 },
+  input: {
+    flex: 1,
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#c5e1a5',
+    borderRadius: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 16,
+  },
+  addButton: {
+    backgroundColor: '#2e7d32',
+    borderRadius: 10,
+    marginLeft: 8,
+    paddingHorizontal: 20,
+    justifyContent: 'center',
+  },
+  addButtonText: { color: '#fff', fontWeight: '600', fontSize: 16 },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 8,
+    elevation: 1,
+  },
+  rowTextWrap: { flex: 1 },
+  rowText: { fontSize: 17, color: '#222' },
+  rowTextDone: { textDecorationLine: 'line-through', color: '#9e9e9e' },
+  deleteButton: {
+    backgroundColor: '#e53935',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    marginLeft: 8,
+  },
+  deleteButtonText: { color: '#fff', fontWeight: '600' },
+  empty: { textAlign: 'center', color: '#888', marginTop: 40, fontSize: 16 },
+});
